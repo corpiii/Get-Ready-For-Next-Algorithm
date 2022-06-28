@@ -2,7 +2,7 @@
 백준 시뮬레이션 알고리즘 풀기
 
 
-![100%](https://progress-bar.dev/0/?scale=60&title=progress&width=500&color=babaca&suffix=/60)
+![100%](https://progress-bar.dev/1/?scale=60&title=progress&width=500&color=babaca&suffix=/60)
 
 [문제집 링크](https://www.acmicpc.net/workbook/view/7316)
 
