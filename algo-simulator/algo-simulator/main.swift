@@ -1,0 +1,11 @@
+//
+//  main.swift
+//  algo-simulator
+//
+//  Created by 이정민 on 2022/06/28.
+//
+
+import Foundation
+
+print("Hello, World!")
+
