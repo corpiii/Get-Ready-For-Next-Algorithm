@@ -8,6 +8,5 @@
 import Foundation
 
 // watcher()
-//groupWordChecker()
-
-
+// groupWordChecker()
+// putStickerOn()
