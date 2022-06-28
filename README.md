@@ -8,7 +8,7 @@
 
 | 문제 분류 | 문제 | 문제 제목 | 풀이 여부 |
 | :--: | :--: | :--: | :--: |
-| 연습 문제 | 15683 | [감시](https://www.acmicpc.net/problem/15683) | ⭐️(100분) |
+| 연습 문제 | 15683 | [감시](https://www.acmicpc.net/problem/15683) | |
 | 연습 문제 | 18808 | [스티커 붙이기](https://www.acmicpc.net/problem/18808) | ⭐️(80분) |
 | 연습 문제 | 12100 | [2048 (Easy)](https://www.acmicpc.net/problem/12100) |  |
 | 연습 문제 | 15686 | [치킨 배달](https://www.acmicpc.net/problem/15686) | |
