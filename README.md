@@ -8,11 +8,11 @@
 
 | 문제 분류 | 문제 | 문제 제목 | 풀이 여부 |
 | :--: | :--: | :--: | :--: |
-| 연습 문제 | 15683 | [감시](https://www.acmicpc.net/problem/15683) | |
+| 연습 문제 | 15683 | [감시](https://www.acmicpc.net/problem/15683) | 😔 |
 | 연습 문제 | 18808 | [스티커 붙이기](https://www.acmicpc.net/problem/18808) | ⭐️(80분) |
 | 연습 문제 | 12100 | [2048 (Easy)](https://www.acmicpc.net/problem/12100) |  |
 | 연습 문제 | 15686 | [치킨 배달](https://www.acmicpc.net/problem/15686) | |
-| 기본 문제✔ | 11559 | [Puyo Puyo](https://www.acmicpc.net/problem/11559) |
+| 기본 문제✔ | 11559 | [Puyo Puyo](https://www.acmicpc.net/problem/11559) | 😔 |
 | 기본 문제✔ | 14891 | [톱니바퀴](https://www.acmicpc.net/problem/14891) | |
 | 기본 문제✔ | 14499 | [주사위 굴리기](https://www.acmicpc.net/problem/14499) |
 | 기본 문제✔ | 13335 | [트럭](https://www.acmicpc.net/problem/13335) | |
