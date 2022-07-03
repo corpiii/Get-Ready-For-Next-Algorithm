@@ -12,6 +12,8 @@
 		ACDCF0AE286B1B5B0014B67E /* groupWordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0AD286B1B5B0014B67E /* groupWordChecker.swift */; };
 		ACDCF0B0286B20AA0014B67E /* putStickerOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0AF286B20AA0014B67E /* putStickerOn.swift */; };
 		ACDCF0B2286B35770014B67E /* laboratory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0B1286B35760014B67E /* laboratory.swift */; };
+		ACDCF0BC286EFD630014B67E /* puyo_puyo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0BB286EFD630014B67E /* puyo_puyo.swift */; };
+		ACDCF0BE286F21D00014B67E /* sawTooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0BD286F21D00014B67E /* sawTooth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,8 @@
 		ACDCF0AD286B1B5B0014B67E /* groupWordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupWordChecker.swift; sourceTree = "<group>"; };
 		ACDCF0AF286B20AA0014B67E /* putStickerOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = putStickerOn.swift; sourceTree = SOURCE_ROOT; };
 		ACDCF0B1286B35760014B67E /* laboratory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laboratory.swift; sourceTree = "<group>"; };
+		ACDCF0BB286EFD630014B67E /* puyo_puyo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = puyo_puyo.swift; sourceTree = "<group>"; };
+		ACDCF0BD286F21D00014B67E /* sawTooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sawTooth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 		ACDCF098286A89D20014B67E = {
 			isa = PBXGroup;
 			children = (
+				ACDCF0BD286F21D00014B67E /* sawTooth.swift */,
 				ACDCF0A3286A89D20014B67E /* algo-simulator */,
 				ACDCF0A2286A89D20014B67E /* Products */,
 			);
@@ -70,6 +75,7 @@
 				ACDCF0AB286A8A080014B67E /* watcher.swift */,
 				ACDCF0AD286B1B5B0014B67E /* groupWordChecker.swift */,
 				ACDCF0B1286B35760014B67E /* laboratory.swift */,
+				ACDCF0BB286EFD630014B67E /* puyo_puyo.swift */,
 			);
 			path = "algo-simulator";
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 				ACDCF0AE286B1B5B0014B67E /* groupWordChecker.swift in Sources */,
 				ACDCF0B2286B35770014B67E /* laboratory.swift in Sources */,
 				ACDCF0A5286A89D20014B67E /* main.swift in Sources */,
+				ACDCF0BE286F21D00014B67E /* sawTooth.swift in Sources */,
+				ACDCF0BC286EFD630014B67E /* puyo_puyo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -106,5 +106,3 @@ func laboratory() {
     
     print(result)
 }
-
-laboratory()
