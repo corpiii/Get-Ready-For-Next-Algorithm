@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACB935F92874350100F6EA13 /* chickenDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB935F82874350100F6EA13 /* chickenDistance.swift */; };
 		ACDCF0A5286A89D20014B67E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0A4286A89D20014B67E /* main.swift */; };
 		ACDCF0AC286A8A080014B67E /* watcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0AB286A8A080014B67E /* watcher.swift */; };
 		ACDCF0AE286B1B5B0014B67E /* groupWordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0AD286B1B5B0014B67E /* groupWordChecker.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ACB935F82874350100F6EA13 /* chickenDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chickenDistance.swift; sourceTree = "<group>"; };
 		ACDCF0A1286A89D20014B67E /* algo-simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algo-simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDCF0A4286A89D20014B67E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		ACDCF0AB286A8A080014B67E /* watcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watcher.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				ACDCF0AD286B1B5B0014B67E /* groupWordChecker.swift */,
 				ACDCF0B1286B35760014B67E /* laboratory.swift */,
 				ACDCF0BB286EFD630014B67E /* puyo_puyo.swift */,
+				ACB935F82874350100F6EA13 /* chickenDistance.swift */,
 			);
 			path = "algo-simulator";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB935F92874350100F6EA13 /* chickenDistance.swift in Sources */,
 				ACDCF0B0286B20AA0014B67E /* putStickerOn.swift in Sources */,
 				ACDCF0AC286A8A080014B67E /* watcher.swift in Sources */,
 				ACDCF0AE286B1B5B0014B67E /* groupWordChecker.swift in Sources */,
