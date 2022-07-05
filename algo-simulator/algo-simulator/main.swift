@@ -10,3 +10,6 @@ import Foundation
 // watcher()
 // groupWordChecker()
 // putStickerOn()
+//puyo_puyo()
+
+chickenDistance()
