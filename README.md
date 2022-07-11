@@ -2,7 +2,7 @@
 백준 시뮬레이션 알고리즘 풀기
 
 
-![100%](https://progress-bar.dev/4/?scale=60&title=progress&width=250&color=babaca&suffix=/60)
+![100%](https://progress-bar.dev/5/?scale=60&title=progress&width=250&color=babaca&suffix=/60)
 
 [문제집 링크](https://www.acmicpc.net/workbook/view/7316)
 
@@ -29,7 +29,7 @@
 | 기본 문제✔ | 15685 | [드래곤 커브](https://www.acmicpc.net/problem/15685) | |
 | 기본 문제 | 17281 | [⚾](https://www.acmicpc.net/problem/17281) | |
 | 기본 문제 | 5373 | [큐빙](https://www.acmicpc.net/problem/5373) | |
-| 기본 문제 | 16234 | [인구 이동](https://www.acmicpc.net/problem/16234) | |
+| 기본 문제 | 16234 | [인구 이동](https://www.acmicpc.net/problem/16234) | ⭐️(90분) |
 | 기본 문제 | 16235 | [나무 재테크](https://www.acmicpc.net/problem/16235) | |
 | 기본 문제 | 16236 | [아기 상어](https://www.acmicpc.net/problem/16236) | |
 | 기본 문제 | 17140 | [이차원 배열과 연산](https://www.acmicpc.net/problem/17140) | |
