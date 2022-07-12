@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ACB935F92874350100F6EA13 /* chickenDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB935F82874350100F6EA13 /* chickenDistance.swift */; };
+		ACB93671287D01F300F6EA13 /* populationMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB93670287D01F300F6EA13 /* populationMove.swift */; };
 		ACDCF0A5286A89D20014B67E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0A4286A89D20014B67E /* main.swift */; };
 		ACDCF0AC286A8A080014B67E /* watcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0AB286A8A080014B67E /* watcher.swift */; };
 		ACDCF0AE286B1B5B0014B67E /* groupWordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF0AD286B1B5B0014B67E /* groupWordChecker.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		ACB935F82874350100F6EA13 /* chickenDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chickenDistance.swift; sourceTree = "<group>"; };
+		ACB93670287D01F300F6EA13 /* populationMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = populationMove.swift; sourceTree = "<group>"; };
 		ACDCF0A1286A89D20014B67E /* algo-simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algo-simulator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDCF0A4286A89D20014B67E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		ACDCF0AB286A8A080014B67E /* watcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watcher.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				ACDCF0B1286B35760014B67E /* laboratory.swift */,
 				ACDCF0BB286EFD630014B67E /* puyo_puyo.swift */,
 				ACB935F82874350100F6EA13 /* chickenDistance.swift */,
+				ACB93670287D01F300F6EA13 /* populationMove.swift */,
 			);
 			path = "algo-simulator";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				ACDCF0B2286B35770014B67E /* laboratory.swift in Sources */,
 				ACDCF0A5286A89D20014B67E /* main.swift in Sources */,
 				ACDCF0BE286F21D00014B67E /* sawTooth.swift in Sources */,
+				ACB93671287D01F300F6EA13 /* populationMove.swift in Sources */,
 				ACDCF0BC286EFD630014B67E /* puyo_puyo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

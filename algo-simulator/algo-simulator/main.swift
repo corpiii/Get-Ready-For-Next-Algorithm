@@ -7,9 +7,9 @@
 
 import Foundation
 
-// watcher()
+watcher()
 // groupWordChecker()
 // putStickerOn()
 //puyo_puyo()
+//chickenDistance()
 
-chickenDistance()
