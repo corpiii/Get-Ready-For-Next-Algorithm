@@ -2,13 +2,13 @@
 백준 시뮬레이션 알고리즘 풀기
 
 
-![100%](https://progress-bar.dev/5/?scale=60&title=progress&width=250&color=babaca&suffix=/60)
+![100%](https://progress-bar.dev/6/?scale=60&title=progress&width=250&color=babaca&suffix=/60)
 
 [문제집 링크](https://www.acmicpc.net/workbook/view/7316)
 
 | 문제 분류 | 문제 | 문제 제목 | 풀이 여부 |
 | :--: | :--: | :--: | :--: |
-| 연습 문제 | 15683 | [감시](https://www.acmicpc.net/problem/15683) | 😔 |
+| 연습 문제 | 15683 | [감시](https://www.acmicpc.net/problem/15683) | ⭐️(80분) |
 | 연습 문제 | 18808 | [스티커 붙이기](https://www.acmicpc.net/problem/18808) | ⭐️(80분) |
 | 연습 문제 | 12100 | [2048 (Easy)](https://www.acmicpc.net/problem/12100) |  |
 | 연습 문제 | 15686 | [치킨 배달](https://www.acmicpc.net/problem/15686) | ⭐️(40분) |
