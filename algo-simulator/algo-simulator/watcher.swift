@@ -7,263 +7,104 @@
 
 import Foundation
 
-enum Vector {
-    case up
-    case down
-    case right
-    case left
-}
-
 func watcher() {
     let n = readLine()!.split(separator: " ").map({Int($0)!})
+    var result = n[0] * n[1]
     var map: [[Int]] = []
     for _ in 1...n[0] {
         let input = readLine()!.components(separatedBy: " ").map({Int($0)!})
         map.append(input)
     }
     
-    //map.forEach({print($0)})
-    
-    // 빈칸수 가지기?
-    // 1~5 번 딕셔너리 만들기
-    
-    // 1번 4방향 돌리기 4개의 배열 중 가장 많은 숫자 적용하기
-    // 2번 2방향
-    // 3번 4방향
-    // 4번 4방향
-    // 5번 1방향 역순합시다
-    
-    var watcherPosition: [Int : [[Int]]] = [1:[], 2:[], 3:[], 4:[], 5:[]]
-    
-    for row in map.indices {
-        for col in map[row].indices {
-            switch map[row][col] {
-            case 1:
-                watcherPosition[1]!.append([row, col])
-                break
-            case 2:
-                watcherPosition[2]!.append([row, col])
-                break
-            case 3:
-                watcherPosition[3]!.append([row, col])
-                break
-            case 4:
-                watcherPosition[4]!.append([row, col])
-                break
-            case 5:
-                watcherPosition[5]!.append([row, col])
-                break
-            default:
-                break
-            }
-        }
-    }
-
-    
-    for watcher in stride(from: 5, through: 1, by: -1) {
-        for position in watcherPosition[watcher]! {
-            var maximumWatch: [[Int]] = []
-            
-            if watcher == 5 {
-                watcher_5(position, &map, limitted_row: n[0], limitted_col: n[1])
-            } else if watcher == 4 {
-                watcher_4(position, &map, limitted_row: n[0], limitted_col: n[1], &maximumWatch)
-            } else if watcher == 3 {
-                watcher_3(position, &map, limitted_row: n[0], limitted_col: n[1], &maximumWatch)
-            } else if watcher == 2 {
-                watcher_2(position, &map, limitted_row: n[0], limitted_col: n[1], &maximumWatch)
-            } else if watcher == 1 {
-                watcher_1(position, &map, limitted_row: n[0], limitted_col: n[1], &maximumWatch)
-            }
-        }
-//        map.forEach({print($0)})
-    }
-    
-    var result = 0
-    for row in map.indices {
-        for col in map[row].indices {
-            if map[row][col] == 0 {
-                result += 1
+    // cctv 위치 배열
+    var cctvArray: [(Int, Int)] = []
+    for row in 0..<n[0] {
+        for col in 0..<n[1] {
+            let object = map[row][col]
+            if object != 0 && object != 6 {
+                cctvArray.append((row, col))
             }
         }
     }
     
+    cctv_dfs(cctvArray, 0, map, &result)
     print(result)
 }
 
-func watcher_5(_ position: [Int], _ map: inout [[Int]] , limitted_row: Int, limitted_col: Int) {
-    let row = position[0]
-    let col = position[1]
-    
-    var result: [[Int]] = []
-    for direction in [Vector.up, Vector.right, Vector.down, Vector.left] {
-        result += straight(row, col, direction, map)
+func cctv_dfs(_ cctvArray: [(Int, Int)], _ index: Int, _ map: [[Int]], _ result: inout Int) {
+    if index == cctvArray.count {
+        result = min(countWatchArea(map), result)
+        return
     }
     
-    for position in result {
-        map[position[0]][position[1]] = -1
-    }
-}
-
-func watcher_4(_ position: [Int], _ map: inout [[Int]] , limitted_row: Int, limitted_col: Int, _ maximumWatch: inout [[Int]]) {
-    let row = position[0]
-    let col = position[1]
+    let cctv = cctvArray[index] // cctv
+    let number = map[cctv.0][cctv.1] // cctv 번호
     
-    let directions = [Vector.up, Vector.right, Vector.down, Vector.left]
-    
-    var watchesByDirection: [[[Int]]] = []
-    for time in 0...3 {
-        let vectors = [time, time + 1, time + 2]
-        var result: [[Int]] = []
-        for direction in vectors {
-            result += straight(row, col, directions[direction % 4], map)
-        }
-        watchesByDirection.append(result)
-    }
-    
-    var maxIndex = 0
-    for index in watchesByDirection.indices {
-        if watchesByDirection[index].count > watchesByDirection[maxIndex].count {
-            maxIndex = index
-        }
-    }
-    
-    for position in watchesByDirection[maxIndex] {
-        map[position[0]][position[1]] = -1
-    }
-    
-    //print(watchesByDirection.max(by: {$0.count}))
-    //watchesByDirection.forEach({print($0)})
-}
-
-func watcher_3(_ position: [Int], _ map: inout [[Int]] , limitted_row: Int, limitted_col: Int,_ maximumWatch: inout [[Int]]) {
-    let row = position[0]
-    let col = position[1]
-    
-    let directions = [Vector.up, Vector.right, Vector.down, Vector.left]
-    var watchesByDirection: [[[Int]]] = []
-    for time in 0...3 {
-        let vectors = [time, time + 1]
-        var result: [[Int]] = []
-        for direction in vectors {
-            result += straight(row, col, directions[direction % 4], map)
-        }
-        watchesByDirection.append(result)
-    }
-    
-    var maxIndex = 0
-    for index in watchesByDirection.indices {
-        if watchesByDirection[index].count > watchesByDirection[maxIndex].count {
-            maxIndex = index
-        }
-    }
-    
-    for position in watchesByDirection[maxIndex] {
-        map[position[0]][position[1]] = -1
-    }
-    
-}
-func watcher_2(_ position: [Int], _ map: inout [[Int]] , limitted_row: Int, limitted_col: Int, _ maximumWatch: inout [[Int]]) {
-    let row = position[0]
-    let col = position[1]
-    
-    let directions = [Vector.up, Vector.right, Vector.down, Vector.left]
-    var watchesByDirection: [[[Int]]] = []
-    for time in 0...1 {
-        let vectors = [time, time + 2]
-        var result: [[Int]] = []
-        for direction in vectors {
-            result += straight(row, col, directions[direction % 4], map)
-        }
-        watchesByDirection.append(result)
-    }
-    
-    var maxIndex = 0
-    for index in watchesByDirection.indices {
-        if watchesByDirection[index].count > watchesByDirection[maxIndex].count {
-            maxIndex = index
-        }
-    }
-    
-    for position in watchesByDirection[maxIndex] {
-        map[position[0]][position[1]] = -1
-    }
-}
-func watcher_1(_ position: [Int], _ map: inout [[Int]] , limitted_row: Int, limitted_col: Int, _ maximumWatch: inout [[Int]]) {
-    let row = position[0]
-    let col = position[1]
-    
-    let directions = [Vector.up, Vector.right, Vector.down, Vector.left]
-    var watchesByDirection: [[[Int]]] = []
-    for time in 0...3 {
-        let vectors = [time]
-        var result: [[Int]] = []
-        for direction in vectors {
-            result += straight(row, col, directions[direction % 4], map)
-        }
-        watchesByDirection.append(result)
-    }
-    
-    var maxIndex = 0
-    for index in watchesByDirection.indices {
-        if watchesByDirection[index].count > watchesByDirection[maxIndex].count {
-            maxIndex = index
-        }
-    }
-    
-    for position in watchesByDirection[maxIndex] {
-        map[position[0]][position[1]] = -1
+    for vector in 0..<4 {
+        var new_map = map
+        new_map = watchArea(cctv, number, vector, new_map)
+        cctv_dfs(cctvArray, index + 1, new_map, &result)
     }
 }
 
-func straight(_ row: Int, _ col: Int, _ direction: Vector, _ map: [[Int]]) -> [[Int]] {
-    var row = row
-    var col = col
-    var result: [[Int]] = []
-    if direction == .up { // 위
-        while row != -1 {
-            let value = map[row][col]
-            if value == 6 {
-                break
-            } else if value == 0 {
-                result.append([row, col])
+func countWatchArea(_ map: [[Int]]) -> Int {
+    var count = 0
+    for row in map.indices {
+        for col in map[0].indices {
+            if map[row][col] == 0 {
+                count += 1
             }
-            row -= 1
-        }
-    } else if direction == .right { // 오른쪽
-        while col != map[row].count {
-            let value = map[row][col]
-            if value == 6 {
-                break
-            } else if value == 0 {
-                result.append([row, col])
-            }
-            
-            col += 1
-        }
-    } else if direction == .down { // 아래
-        while row != map.count {
-            let value = map[row][col]
-            if value == 6 {
-                break
-            } else if value == 0 {
-                result.append([row, col])
-            }
-            
-            row += 1
-        }
-    } else if direction == .left { // 왼쪽
-        while col != -1 {
-            let value = map[row][col]
-            if value == 6 {
-                break
-            } else if value == 0 {
-                result.append([row, col])
-            }
-            
-            col -= 1
         }
     }
     
-    return result
+    return count
+}
+
+func watchArea(_ cctv: (Int, Int), _ number: Int, _ vector: Int, _ map: [[Int]]) -> [[Int]] {
+    var new_map = map
+    var directions: [Int] = []
+    
+    directions.append(vector)
+    switch number {
+    case 2:
+        directions.append((vector + 2) % 4)
+        break
+    case 3:
+        directions.append((vector + 3) % 4)
+        break
+    case 4:
+        directions.append((vector + 1) % 4)
+        directions.append((vector + 3) % 4)
+        break
+    case 5:
+        directions = [0, 1, 2, 3]
+        break
+    default:
+        break
+    }
+    
+    let x_move = [-1, 0, 1, 0]
+    let y_move = [0, -1, 0, 1]
+    
+    for direction in directions {
+        let dx = x_move[direction]
+        let dy = y_move[direction]
+        
+        var row = cctv.0 + dx
+        var col = cctv.1 + dy
+        
+        while 0 <= row, row < map.count && 0 <= col, col < map[0].count {
+            let area = new_map[row][col]
+            if area == 6 {
+                break
+            } else if area == 0 {
+                new_map[row][col] = 7
+            }
+            
+            row += dx
+            col += dy
+        }
+    }
+    
+    return new_map
 }
