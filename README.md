@@ -1,8 +1,17 @@
-# algo-simulation
-백준 시뮬레이션 알고리즘 풀기
+# 알고리즘 푼 것 정리
 
-
+<!--
 ![100%](https://progress-bar.dev/6/?scale=60&title=progress&width=250&color=babaca&suffix=/60)
+
+## 프로그래머스
+[프로그래머스 모음]()
+
+## LeetCode
+
+[LeetCode 모음]()
+
+## 백준
+[백준 모음]()
 
 [문제집 링크](https://www.acmicpc.net/workbook/view/7316)
 
@@ -68,3 +77,4 @@
 | 기본 문제 | 23289 | [온풍기 안녕!](https://www.acmicpc.net/problem/23289) | |
 | 기본 문제 | 23290 | [마법사 상어와 복제](https://www.acmicpc.net/problem/23290) | |
 | 기본 문제 | 23291 | [어항 정리](https://www.acmicpc.net/problem/23291) | |
+-->
